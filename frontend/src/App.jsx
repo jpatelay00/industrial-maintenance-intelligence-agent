@@ -238,39 +238,19 @@ function App() {
         {/* SIDEBAR */}
         <aside className="sidebar">
 
-          <button className="new-case">
+          <button
+            type="button"
+            className="new-case"
+            onClick={() => {
+              setProblem("");
+              setInvestigation(null);
+              setDocumentError("");
+              setShowMaintenanceForm(false);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
             + New Investigation
           </button>
-
-          <nav>
-            <div className="nav-section">
-              WORKSPACE
-            </div>
-
-            <a className="active">
-              Investigation
-            </a>
-
-            <a>
-              Evidence
-            </a>
-
-            <a>
-              Maintenance History
-            </a>
-          </nav>
-
-          <div className="sidebar-bottom">
-
-            <div className="nav-section">
-              SYSTEM
-            </div>
-
-            <a>
-              Settings
-            </a>
-
-          </div>
 
         </aside>
 
@@ -320,7 +300,7 @@ function App() {
 
 
             {/* ---------------------------------------
-                EVIDENCE UPLOADS
+                TECHNICAL DOCUMENT
             --------------------------------------- */}
             <div className="evidence-row">
 
@@ -365,56 +345,6 @@ function App() {
                 </label>
 
               </div>
-
-
-              {/* EQUIPMENT IMAGES */}
-              <div className="evidence-card">
-
-                <div className="evidence-icon">
-                  🖼️
-                </div>
-
-                <div>
-                  <strong>
-                    Equipment Images
-                  </strong>
-
-                  <p>
-                    Photos, diagrams, visual evidence
-                  </p>
-                </div>
-
-                <button>
-                  Upload
-                </button>
-
-              </div>
-
-
-              {/* MAINTENANCE RECORDS */}
-              <div className="evidence-card">
-
-                <div className="evidence-icon">
-                  📋
-                </div>
-
-                <div>
-                  <strong>
-                    Maintenance Records
-                  </strong>
-
-                  <p>
-                    Error logs, history, service records
-                  </p>
-                </div>
-
-                <button>
-                  Upload
-                </button>
-
-              </div>
-
-            </div>
 
 
             {/* ---------------------------------------
@@ -974,7 +904,6 @@ function App() {
 
                 <div
                   key={record.record_id}
-                  id={`maintenance-${record.record_id}`}
                   className="evidence-card"
                 >
 
@@ -1123,6 +1052,7 @@ function App() {
             </div>
           )}
 
+          </div>
 
           {/* ---------------------------------------
               FEATURE PREVIEW
