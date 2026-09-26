@@ -1,0 +1,449 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f4f6f8;
+  color: #17202a;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Top navigation */
+
+.topbar {
+  height: 76px;
+  background: #ffffff;
+  border-bottom: 1px solid #dfe3e8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.topbar span {
+  font-size: 12px;
+  color: #68737d;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #4f5b66;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #2e9d62;
+}
+
+/* Dashboard */
+
+.dashboard {
+  display: flex;
+  min-height: calc(100vh - 76px);
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 240px;
+  background: #20272e;
+  color: white;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-case {
+  border: none;
+  background: #ffffff;
+  color: #20272e;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+.nav-section {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #8d99a5;
+  margin: 12px 10px;
+}
+
+.sidebar nav,
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar a {
+  padding: 11px 10px;
+  border-radius: 5px;
+  color: #cbd2d8;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.sidebar a.active {
+  background: #343d46;
+  color: white;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+/* Main workspace */
+
+.workspace {
+  flex: 1;
+  padding: 42px;
+  max-width: 1400px;
+}
+
+.workspace-header {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: #68737d;
+  margin-bottom: 8px;
+}
+
+.workspace h2 {
+  font-size: 30px;
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  color: #68737d;
+  margin: 0;
+}
+
+/* Investigation */
+
+.investigation-card {
+  background: white;
+  border: 1px solid #dfe3e8;
+  border-radius: 10px;
+  padding: 28px;
+}
+
+.investigation-card label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 140px;
+  resize: vertical;
+  border: 1px solid #ccd2d8;
+  border-radius: 7px;
+  padding: 15px;
+  font: inherit;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #697680;
+}
+
+/* Evidence */
+
+.evidence-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.evidence-card {
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.evidence-icon {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.evidence-card strong {
+  font-size: 14px;
+}
+
+.evidence-card p {
+  color: #68737d;
+  font-size: 12px;
+  line-height: 1.5;
+  min-height: 36px;
+}
+
+.evidence-card button {
+  border: 1px solid #c7cdd2;
+  background: white;
+  border-radius: 5px;
+  padding: 7px 12px;
+  font-size: 12px;
+}
+
+/* Investigation button */
+
+.investigate-button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  background: #20272e;
+  color: white;
+  font-weight: 600;
+}
+
+/* Preview */
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.preview-card {
+  background: white;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.preview-label {
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #7a858e;
+}
+
+.preview-card h3 {
+  margin: 9px 0;
+  font-size: 17px;
+}
+
+.preview-card p {
+  margin: 0;
+  color: #68737d;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 190px;
+  }
+
+  .evidence-row,
+  .preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workspace {
+    padding: 24px;
+  }
+}
+
+.result-card {
+  margin-top: 20px;
+  background: white;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  padding: 22px;
+}
+
+.result-card h3 {
+  margin: 8px 0;
+  font-size: 20px;
+}
+
+.result-card p {
+  color: #68737d;
+  line-height: 1.5;
+}
+
+.problem-result {
+  margin-top: 16px;
+  padding: 14px;
+  background: #f4f6f8;
+  border-radius: 6px;
+}
+
+.problem-result strong {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.problem-result p {
+  margin-bottom: 0;
+}
+
+.investigate-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* ---------------------------------------
+   Maintenance Records
+--------------------------------------- */
+
+.maintenance-add-button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 24px;
+
+  background: #202830;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.maintenance-add-button:hover {
+  background: #374151;
+}
+
+/* ---------------------------------------
+   Maintenance Record Form
+--------------------------------------- */
+
+.maintenance-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  width: 100%;
+  margin: 30px 0;
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  background: #f8fafc;
+  border: 2px solid #202830;
+  border-radius: 12px;
+
+  color: #202830;
+}
+
+.maintenance-form h3 {
+  margin: 0 0 10px 0;
+
+  color: #202830;
+  font-size: 24px;
+}
+
+.maintenance-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  color: #202830;
+  font-weight: 600;
+  text-align: left;
+}
+
+.maintenance-form input,
+.maintenance-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 12px;
+
+  background: white;
+  color: #202830;
+
+  border: 1px solid #9ca3af;
+  border-radius: 6px;
+
+  font-size: 16px;
+}
+
+.maintenance-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.maintenance-form input:focus,
+.maintenance-form textarea:focus {
+  outline: 2px solid #202830;
+}
+
+.maintenance-form button {
+  padding: 14px 20px;
+
+  background: #202830;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.maintenance-form button:hover {
+  background: #374151;
+}
+
+
+/* Add these styles to the bottom of your existing App.css. */
+.maintenance-manager { margin-top: 24px; padding: 20px; border: 1px solid #d9dee7; border-radius: 12px; background: #fff; }
+.maintenance-manager-header { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.maintenance-manager-header p { margin: 6px 0 0; color: #667085; }
+.maintenance-toggle, .maintenance-save { border: 0; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-weight: 600; }
+.maintenance-form { margin-top: 18px; padding: 16px; border-radius: 10px; background: #f7f8fa; }
+.maintenance-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.maintenance-form label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 14px; }
+.maintenance-form-wide { grid-column: 1 / -1; }
+.maintenance-form input { width: 100%; box-sizing: border-box; padding: 10px 12px; border: 1px solid #cfd5df; border-radius: 7px; font: inherit; background: #fff; }
+.maintenance-save { margin-top: 14px; }
+.maintenance-error { margin-top: 12px; padding: 10px 12px; border-radius: 7px; background: #fff1f1; color: #a33a3a; }
+.maintenance-record-list { display: grid; gap: 12px; margin-top: 18px; }
+.maintenance-record { padding: 14px; border: 1px solid #e1e5eb; border-radius: 10px; background: #fafbfc; scroll-margin-top: 24px; }
+.maintenance-record-header { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.maintenance-record-equipment { font-size: 13px; color: #667085; margin-bottom: 10px; }
+.maintenance-record p { margin: 6px 0; }
+@media (max-width: 700px) { .maintenance-form-grid { grid-template-columns: 1fr; } .maintenance-form-wide { grid-column: auto; } .maintenance-manager-header { align-items: flex-start; flex-direction: column; } }
