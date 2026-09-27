@@ -2,7 +2,7 @@
 
 IMIA (Industrial Maintenance Intelligence Agent) is an AI-powered maintenance investigation assistant designed to help technicians investigate industrial equipment problems using technical documentation and maintenance history. 
 
-*this project is run locally*
+(*this project is run locally*)
 
 Instead of providing an unsupported AI-generated answer, IMIA retrieves relevant evidence from uploaded technical documents and connects that evidence to potential causes and recommended investigation steps.
 
