@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IMIA | Industrial Maintenance Intelligence Agent</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #0b1220;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        .hero {
+            padding: 90px 20px 70px;
+            text-align: center;
+            background: linear-gradient(135deg, #0b1220, #14213d);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 7px 14px;
+            border: 1px solid #3b82f6;
+            border-radius: 999px;
+            color: #93c5fd;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 7vw, 72px);
+            margin: 0;
+            letter-spacing: -2px;
+        }
+
+        .subtitle {
+            max-width: 760px;
+            margin: 20px auto;
+            font-size: 20px;
+            color: #cbd5e1;
+        }
+
+        .buttons {
+            margin-top: 32px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 7px;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid #475569;
+            color: white;
+            background: #1e293b;
+        }
+
+        .button.primary {
+            background: #2563eb;
+            border-color: #2563eb;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 65px 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            color: #cbd5e1;
+            max-width: 850px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            padding: 25px;
+            border: 1px solid #263449;
+            border-radius: 14px;
+            background: #111827;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card p {
+            color: #cbd5e1;
+        }
+
+        .architecture {
+            background: #111827;
+        }
+
+        .flow {
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 14px;
+            background: #0f172a;
+            border: 1px solid #263449;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .flow span {
+            color: #93c5fd;
+            font-weight: 600;
+        }
+
+        .demo {
+            text-align: center;
+        }
+
+        .notice {
+            margin-top: 30px;
+            padding: 20px;
+            border-left: 4px solid #3b82f6;
+            background: #111827;
+            color: #cbd5e1;
+            text-align: left;
+            border-radius: 6px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            color: #94a3b8;
+            border-top: 1px solid #263449;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="hero">
+
+    <div class="badge">ABB Accelerator 2026 • Prototype</div>
+
+    <h1>IMIA</h1>
+
+    <p class="subtitle">
+        Industrial Maintenance Intelligence Agent
+    </p>
+
+    <p class="subtitle">
+        An evidence-grounded AI assistant that investigates industrial
+        equipment problems using technical documentation and maintenance history.
+    </p>
+
+    <div class="buttons">
+        <a class="button primary"
+           href="https://github.com/jpatelay00/industrial-maintenance-intelligence-agent"
+           target="_blank">
+            View Source Code
+        </a>
+
+        <a class="button"
+           href="https://www.youtube.com/"
+           target="_blank">
+            Watch Demo
+        </a>
+    </div>
+
+</section>
+
+
+<section class="container">
+
+    <h2>The Problem</h2>
+
+    <p class="intro">
+        Industrial maintenance troubleshooting often requires technicians
+        to search through manuals, fault codes, procedures, and previous
+        maintenance records before identifying a likely cause.
+    </p>
+
+    <p class="intro">
+        IMIA combines these information sources into a structured AI-assisted
+        investigation instead of providing an unsupported chatbot answer.
+    </p>
+
+</section>
+
+
+<section class="container">
+
+    <h2>The Solution</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Evidence-Grounded Investigation</h3>
+            <p>
+                IMIA retrieves relevant evidence from uploaded technical
+                documentation and connects that evidence to potential causes.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Show Me Why</h3>
+            <p>
+                Each potential cause can reference the specific evidence
+                supporting the investigation.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Maintenance History</h3>
+            <p>
+                Historical maintenance records provide additional context
+                without being confused with technical documentation.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Local AI</h3>
+            <p>
+                The prototype uses Ollama and a local Llama model, demonstrating
+                a path toward private enterprise deployment.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="architecture">
+
+    <div class="container">
+
+        <h2>How IMIA Works</h2>
+
+        <div class="flow">
+            <span>Problem Description</span>
+            →
+            <span>Technical Manual</span>
+            →
+            <span>Evidence Retrieval</span>
+            →
+            <span>AI Investigation</span>
+            →
+            <span>Evidence-Backed Causes</span>
+        </div>
+
+        <div class="flow">
+            <span>Maintenance History</span>
+            →
+            <span>Historical Context</span>
+            →
+            <span>Investigation Report</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="container">
+
+    <h2>Prototype Scenario</h2>
+
+    <p class="intro">
+        The prototype investigates an industrial motor and VFD scenario.
+        The reported problem is that the motor shuts down after approximately
+        ten minutes of operation.
+    </p>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Equipment</h3>
+            <p>
+                MTR-204<br>
+                Three-phase induction motor<br>
+                VFD-204<br>
+                480 V AC
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Historical Evidence</h3>
+            <p>
+                A previous maintenance record reports an OVERLOAD fault
+                in the VFD fault history.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Investigation</h3>
+            <p>
+                IMIA retrieves relevant technical evidence and presents
+                potential causes with supporting evidence IDs.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="container demo">
+
+    <h2>Prototype Demo</h2>
+
+    <p class="intro" style="margin-left:auto;margin-right:auto;">
+        Watch the IMIA prototype demonstrate document upload,
+        maintenance history, AI investigation, and evidence-backed reasoning.
+    </p>
+
+    <div class="buttons">
+
+        <a class="button primary"
+           href="https://github.com/jpatelay00/industrial-maintenance-intelligence-agent"
+           target="_blank">
+            Explore the Project
+        </a>
+
+    </div>
+
+    <div class="notice">
+        <strong>Prototype Notice:</strong>
+        IMIA is an academic/hackathon prototype and is not a production
+        industrial control or maintenance system. Its recommendations require
+        qualified human review before any real-world maintenance action.
+    </div>
+
+</section>
+
+
+<footer>
+
+    IMIA — Industrial Maintenance Intelligence Agent<br>
+    ABB Accelerator 2026 Prototype<br><br>
+    Built by Jay Patel
+
+</footer>
+
+</body>
+</html>
